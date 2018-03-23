@@ -41,7 +41,7 @@ public class FlappyMovement extends Thread {
             Game.jFlappy.setLocation(x, y);
             parent.validarChoqueTubos();
             parent.detectColision();
-            System.out.println(y);
+            
                   
         }
     }
