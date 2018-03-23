@@ -1,6 +1,7 @@
 package Clases;
 
 import Interfaz.Game;
+import java.awt.Toolkit;
 
 public class FlappyMovement extends Thread {
 
@@ -39,6 +40,7 @@ public class FlappyMovement extends Thread {
             double time =(double) ((System.currentTimeMillis() - timeIni)/100f);
             int y = (int) (yInit + v0 + (0.5) * ACCELERATION * time * time);
             Game.jFlappy.setLocation(x, y);
+            Toolkit.getDefaultToolkit().sync();
             parent.validarChoqueTubos();
             parent.detectColision();
             
