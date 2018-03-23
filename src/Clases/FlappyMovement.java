@@ -39,8 +39,8 @@ public class FlappyMovement extends Thread {
             double time =(double) ((System.currentTimeMillis() - timeIni)/100f);
             int y = (int) (yInit + v0 + (0.5) * ACCELERATION * time * time);
             Game.jFlappy.setLocation(x, y);
-            
-               
+            parent.validarChoqueTubos();
+            parent.detectColision();
             System.out.println(y);
                   
         }
